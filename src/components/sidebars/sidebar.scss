@@ -3,7 +3,7 @@
     width: 100px;
     height: 40vh;
     background-color:#fff;
-    // z-index: 888;
+     z-index: 888;
     position: fixed;
     top: 65px;
     
@@ -21,5 +21,36 @@
     }
     .side_item:hover{
         background-color: #e8ebed;
+    }
+}
+@media screen and (max-width: 375px) {
+    .sidebar_container{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .sidebar_container{
+        display: block;
+        width: 90px;
+        height: 35vh;
+        background-color:#fff;
+        position: fixed;
+        top: 65px;
+        
+    
+        .side_item{
+            display: flex;
+            flex-direction: column;
+            width: 80px;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            margin: 0 auto;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        .side_item:hover{
+            background-color: #e8ebed;
+        }
     }
 }

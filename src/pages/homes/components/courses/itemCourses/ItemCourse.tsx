@@ -15,7 +15,7 @@ export default function ItemCourse(props: Props) {
                     <div key={Math.random() * Date.now()} className="item_content">
                         <img src={item.img} alt="" />
                         <p>{item.nameCourse}</p>
-                        <span>{item.price}</span>
+                        <p>{item.price}</p>
                         <div className="middle">
                             <div className="text">Xem khóa học</div>
                         </div>

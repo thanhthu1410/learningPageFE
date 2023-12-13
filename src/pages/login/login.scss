@@ -142,3 +142,33 @@
   justify-content: center;
   background: #f0faff;
 }
+@media screen and (max-width: 600px) {
+  // Import Google font - Poppins
+
+.wrapper {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px 30px 120px;
+  background: #8099dd;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+}
+}
+@media screen and (max-width: 375px) {
+  // Import Google font - Poppins
+
+.wrapper {
+  position: relative;
+  max-width: 330px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px 30px 120px;
+  background: #8099dd;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+}
+}
