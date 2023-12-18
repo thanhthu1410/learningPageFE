@@ -57,6 +57,7 @@
 @media (max-width: 375px){
     .navbar_container{
         display: block;
+    position: relative;
     }
     .navbar_container_chrild{
         display: none !important;
@@ -77,11 +78,18 @@
        
     }
     .navbar_mobile_content{
+      
         display: flex;
         flex-direction: column;
         justify-content: end;
         align-items: flex-end;
-        padding: 1% 7%;
-       
+        padding: 1% 7% 5% 7%;
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+       p:hover{
+        color: rgb(85, 164, 196);
+        cursor: pointer;
+       }
     }
 }

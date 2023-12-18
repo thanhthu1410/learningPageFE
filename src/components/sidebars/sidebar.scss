@@ -6,6 +6,7 @@
      z-index: 888;
     position: fixed;
     top: 65px;
+    left: 220px;
     
 
     .side_item{
@@ -22,6 +23,18 @@
     .side_item:hover{
         background-color: #e8ebed;
     }
+}
+@media screen and (max-width: 1024px) {
+    .sidebar_container{
+        display: block;
+        width: 100px;
+        height: 40vh;
+        background-color:#fff;
+         z-index: 888;
+         position: fixed;
+        top: 65px;
+        left: 0px;
+    }    
 }
 @media screen and (max-width: 375px) {
     .sidebar_container{

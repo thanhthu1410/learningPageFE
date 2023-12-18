@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom"
 import "./navbar.scss"
+import { useState } from "react";
 export default function Navbar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [showNavbar,setShowNavbar] = useState(false);
   return (
     <div className="navbar_container">
       <div className="navbar_container_chrild">
@@ -23,16 +25,16 @@ export default function Navbar() {
           <img src="https://vanphongxanh.vn/wp-content/uploads/2022/03/logo-social.png" alt="" />
         </div>
         <div className="icon_bar">
-          <i className="fa-solid fa-bars"></i>
+          <i onClick={() => setShowNavbar(!showNavbar)} className="fa-solid fa-bars"></i>
         </div>
       </div>
-      <div className="navbar_mobile_content">
-        <p>Home</p>
+      {showNavbar ? <div className="navbar_mobile_content">
+        <p onClick={() => {navigate("/"); setShowNavbar(!showNavbar)}}>Home</p>
         <p>Course</p>
-        <p>Blog</p>
-        <p>Login</p>
-      </div>
-
+        <p onClick={() => {navigate("/blog/1"); setShowNavbar(!showNavbar)}}>Blog</p>
+        <p onClick={() => {navigate("/login"); setShowNavbar(!showNavbar)}}>Login</p>
+      </div>: <></>}
+     
     </div>
   )
 }

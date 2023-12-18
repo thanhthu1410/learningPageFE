@@ -10,14 +10,12 @@ export default function Home() {
   
   return (
     <div className="home_container">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div className="home-container_right">
         <CarouselComponent />
         <Course />
         <Blog/>
         <FeatureVideo/>
-        
-        
       </div>
     </div>
   )
