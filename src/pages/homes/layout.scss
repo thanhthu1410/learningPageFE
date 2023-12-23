@@ -1,0 +1,12 @@
+.layout_comtainer{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+
+    .layout_body_container{
+        width: 100%;
+        display: flex;
+        // justify-content: space-between !important;
+    
+    }
+}

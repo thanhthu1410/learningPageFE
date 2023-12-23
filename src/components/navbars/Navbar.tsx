@@ -16,7 +16,7 @@ export default function Navbar() {
         </div>
 
         <div className="login_logo">
-          <button className="btn-5" onClick={() => navigate("/login")}><span>Login</span></button>
+          <button className="btn-3" onClick={() => navigate("/login")}><span>Login</span></button>
         </div>
       </div>
       <div className="navbar_mobile_chirld"></div>

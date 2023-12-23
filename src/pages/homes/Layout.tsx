@@ -10,10 +10,12 @@ import Sidebar from "@/components/sidebars/Sidebar";
 export default function Layout() {
   return (
     <div className="layout_comtainer">
-        <Navbar/>
+      <Navbar />
+      <div className="layout_body_container">
         <Sidebar />
         <Outlet />
-        <Footer/>
+      </div>
+      <Footer />
     </div>
   )
 }

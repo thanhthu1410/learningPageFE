@@ -10,7 +10,6 @@ export default function Home() {
   
   return (
     <div className="home_container">
-      {/* <Sidebar /> */}
       <div className="home-container_right">
         <CarouselComponent />
         <Course />
