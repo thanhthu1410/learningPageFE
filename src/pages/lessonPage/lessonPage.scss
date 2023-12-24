@@ -1,0 +1,134 @@
+.lessonPage_container{
+    max-width: 1440px;
+
+    .lessonPage_header{
+        width: 100%;
+        padding: 15px;
+        height: 50px;
+        background-color: #29303b;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        .header_left{
+            width: 27%;
+            display: flex;
+            align-items: center;
+            img{
+                width: 50px;
+                margin: 0 10px;
+            }
+            h4{
+                margin: 0;
+            }
+        }
+        .header_rigth{
+            width: 15%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .btn_logOut{
+                border: none;
+                background-color: #29303b;
+                color: #fff;
+            }
+            
+           
+            
+        }
+
+    }
+   
+    .lessonPage_body{
+        width: 100%;
+        padding: 15px;
+        min-height: 90vh;
+        display: flex;
+        justify-content: space-between;
+        .lessonPage_body_left{
+            width: 65%;
+            
+        }
+        .lessonPage_body_right{
+            background-color: #fff;
+            width: 35%;
+            padding: 15px;
+            .card{
+                margin-bottom: 7px;
+               
+            }
+            .card-body{
+                padding: 7px 3% !important;
+                :hover{
+                    cursor: pointer !important;
+                }
+            }
+            .mb-0{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+            .card-header{
+                background-color: #fff;
+            }
+            .btn-lesson_open {
+                width: 90%;
+                display: flex;
+                justify-content: flex-start;
+                background-color: #fff;
+            }
+            .fa-caret-right{
+                margin-right: 2%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .lessonPage_header{
+        padding: 10px !important;
+        height: 45px !important;
+        background-color: grey !important;
+        .header_left{
+            width: 45% !important;
+        }
+    }
+    .lessonPage_body{
+        flex-direction: column;
+        justify-content: start !important;
+        .lessonPage_body_left{
+            width: 100% !important;
+            
+        }
+        .lessonPage_body_right{
+            width: 70% !important;
+    }
+}
+}
+@media screen and (max-width: 375px) {
+    .lessonPage_header{
+        padding: 10px !important;
+        height: 45px !important;
+        background-color: grey !important;
+       
+        .header_left{
+            justify-content: start !important;
+            width: 65% !important;
+           h4{
+            font-size: 12px !important;
+           }
+        }
+    }
+    .lessonPage_body{
+        width: 100%;
+        flex-direction: column;
+        justify-content: start !important;
+        .lessonPage_body_left{
+            width: 100% !important;
+            
+        }
+        .lessonPage_body_right{
+            width: 70% !important;
+    }
+}
+}

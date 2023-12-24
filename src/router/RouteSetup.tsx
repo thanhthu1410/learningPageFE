@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import BlogDetail from '@/pages/homes/components/blogs/detailBlog/Detail'
 import Login from '@/pages/login/Login'
 import CouresPage from '@/pages/coursesPage/CouresPage'
+import LessonPage from '@/pages/lessonPage/LessonPage'
 
 export default function RouteSetup() {
   return (
@@ -15,6 +16,7 @@ export default function RouteSetup() {
           <Route path='course/:id' element={<CouresPage/>}></Route>
         </Route>
         <Route path='/login' element={<Login/>}></Route>
+        <Route path='/lesson/1' element={<LessonPage/>}> </Route>
         </Routes>
 
     </BrowserRouter>

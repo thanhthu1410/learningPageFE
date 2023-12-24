@@ -1,35 +1,8 @@
+import { Course } from "@/interface/Interface";
 import "./couresPage.scss"
 import ModalVideo from "./modalVideoCourse/ModalVideoCourse";
+import { useNavigate } from "react-router-dom";
 
-
-interface Course {
-    id: number;
-    name: string;
-    lessonQuantity: number;
-    des: string;
-    studyTime: string;
-    studyLevel: string
-    course_chapter: Course_chapter[]
-}
-
-// Định nghĩa giao diện Module
-interface Course_chapter {
-    id: number;
-    title: string;
-    numericalOrder: number;
-    lesson: Course_lesson[];
-}
-
-// Định nghĩa giao diện Course
-interface Course_lesson {
-    id: number;
-    title: string;
-    pdfUrl: string;
-    videoUrl: string;
-    numericalOrder: number;
-   
-
-}
 const coursesData: Course[] = [
     {
         id: 1,
@@ -138,56 +111,9 @@ const coursesData: Course[] = [
 ]
 
 
-// Tạo dữ liệu mẫu
-// const coursesData: any = [
-//     {
-//         id: 1,
-//         title: "Web Development",
-//         description: "A comprehensive course on web development.",
-//         modules: [
-//             {
-//                 id: 101,
-//                 title: "HTML Basics 1",
-//                 lessons: [
-//                     { id: 1001, title: "Introduction to HTML" },
-//                     { id: 1002, title: "HTML Elements" }
-//                 ]
-//             },
-//             {
-//                 id: 102,
-//                 title: "CSS Fundamentals 1",
-//                 lessons: [
-//                     { id: 1003, title: "Introduction to CSS" },
-//                     { id: 1004, title: "CSS Selectors" }
-//                 ]
-//             }
-//         ]
-//     },
-//     {
-//         id: 2,
-//         title: "Web Development 2",
-//         description: "A comprehensive course on web development.",
-//         modules: [
-//             {
-//                 id: 1099,
-//                 title: "HTML Basics 2",
-//                 lessons: [
-//                     { id: 1098, title: "Introduction to HTML" },
-//                     { id: 1097, title: "HTML Elements" }
-//                 ]
-//             },
-//             {
-//                 id: 1100,
-//                 title: "CSS Fundamentals",
-//                 lessons: [
-//                     { id: 1096, title: "Introduction to CSS" },
-//                     { id: 1095, title: "CSS Selectors" }
-//                 ]
-//             }
-//         ]
-//     },
-//     // Add more courses with modules and lessons as needed
-// ];
+
+export default function CouresPage() {
+
 const totalLessons = coursesData.reduce((acc, course) => {
     return acc + course.course_chapter.reduce((moduleAcc, module) => {
         return moduleAcc + module.lesson.length;
@@ -196,8 +122,8 @@ const totalLessons = coursesData.reduce((acc, course) => {
 const totalModules = coursesData.reduce((acc, course) => {
     return acc + course.course_chapter.length;
 }, 0);
+const navigate = useNavigate();
 
-export default function CouresPage() {
     return (
         <div className="coursePage_container">
             <div className="coursePage_left">
@@ -213,7 +139,7 @@ export default function CouresPage() {
                                 <h5 className="mb-0">
                                     <i className="fa-solid fa-pen-fancy"></i>
                                     <button
-                                        className="btn btn-link"
+                                        className="btn_open_content"
                                         data-toggle="collapse"
                                         data-target={`#collapse${index}`}
                                         aria-expanded="true"
@@ -247,7 +173,7 @@ export default function CouresPage() {
                     <span>Gioi thieu khoa hoc</span>
                     </div>
                 </div>
-                <button className="btn-3"><span>Đăng Ký Ngay </span></button>
+                <button className="btn-3" onClick={() => navigate("/lesson/1")}><span>Đăng Ký Ngay </span></button>
                 <div className="content_intro">
                     <div>
                     <i className="fa-solid fa-earth-americas"></i> <span>Trình độ cơ bản </span>

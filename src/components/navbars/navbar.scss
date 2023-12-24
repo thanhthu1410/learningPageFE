@@ -28,13 +28,53 @@
             }
         }
         .search{
+            display: flex;
+            justify-content: center;
             width: 33%;
             position: relative;
+            font-size: 14px;
+            .search_content_container{
+                top: 45px;
+                position: absolute;
+                border-radius: 8px;
+                width: 100%;
+                min-height: 200px;
+                background-color: #fff;
+                box-shadow: 1px 2px 2px 3px rgba(159, 157, 157, 0.2);
+                padding:10px;
+               .result-search-title{
+                    color: grey;
+                    font-size: 12px;
+                   
+               }
+               .result-search-content{
+                width: 95%;
+                .result-search-item{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 5px;
+                    :hover{
+                        cursor: pointer;
+                    }
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    };
+                    span{
+                        width: 85%;
+                    }
+                }
+               }
+
+            }
             input{
-               
-                padding: 10px 30px;
+               outline: black !important;
+                padding: 7px 30px;
                 border-radius: 28px;
-                width: 80%;
+                width: 100%;
                 border: 1px solid rgb(187, 185, 185);
             }
             .fa-magnifying-glass {
@@ -53,13 +93,32 @@
         }
     }
 }
+@media screen and (max-width: 1024px){
+   .navbar_container_chrild{
+    height: 58px !important;
+    .search{
+        width: 40% !important;
+    }
+    .logo{
+        width: 30%;
+    }
+    .login_logo{
+        width: 30%;
+    }
+   }
+}
+
 .navbar_mobile{
     display: none;
 }
-@media (max-width: 375px){
+
+
+@media (max-width: 390px){
     .navbar_container{
-        display: block;
+    display: block !important;
     position: relative;
+    position: sticky;
+    top: 0;
     }
     .navbar_container_chrild{
         display: none !important;
@@ -85,7 +144,7 @@
         flex-direction: column;
         justify-content: end;
         align-items: flex-end;
-        padding: 1% 7% 5% 7%;
+        padding: 1% 6% 5% 7%;
         position: absolute;
         background-color: #fff;
         width: 100%;
