@@ -2,100 +2,179 @@ import { useState } from "react"
 import "./course.scss"
 import ItemCourse from "./itemCourses/ItemCourse"
 
-export default function Course() {
-  const [courses, setCourses] = useState(
 
-    [
-
-      {
-        "id": 2,
-        "nameCategory": "Khoa Hoc 2 ",
-        "listCourse": [
+export default function CourseComponent() {
+  const [listCourse, setCourses] = useState([
+    {
+      id: 1,
+      name: "Course 1",
+      lessonQuantity: 10,
+      des: "Description of Course 1",
+      studyTime: "2 hours",
+      studyLevel: "Intermediate",
+      course_chapter: [
           {
-            "id": 8,
-            "nameCourse": "Tiếng anh nghe nói",
-            "img": "https://i.pinimg.com/564x/21/8e/2d/218e2dfb726c0e461a77783b1ce14b80.jpg",
-            "price": 100000,
+              id: 1,
+              title: "Chapter 1",
+              numericalOrder: 1,
+              lesson: [
+                  {
+                      id: 1,
+                      title: "Lesson 1.1",
+                      pdfUrl: "/pdf/lesson1.1.pdf",
+                      videoUrl: "/videos/lesson1.1.mp4",
+                      numericalOrder: 1
+                  },
+                  {
+                      id: 2,
+                      title: "Lesson 1.2",
+                      pdfUrl: "/pdf/lesson1.2.pdf",
+                      videoUrl: "/videos/lesson1.2.mp4",
+                      numericalOrder: 2
+                  }
+              ]
           },
           {
-            "id": 10,
-            "nameCourse": "Tiếng anh dọc hiểu ",
-            "img": "https://i.pinimg.com/564x/2d/ea/03/2dea03e70e1add93759f35595cb4a410.jpg",
-            "price": 999999,
-          },
-          {
-            "id": 9,
-            "nameCourse": "Tiếng anh Ngữ pháp",
-            "img": "https://i.pinimg.com/564x/6d/82/b4/6d82b4843fef1278bf4868cbb6c9a255.jpg",
-            "price": 399.000,
-          },
-          ,
-          {
-            "id": 19,
-            "nameCourse": "Tiếng anh Basic",
-            "img": "https://i.pinimg.com/564x/e8/62/0d/e8620d5364138fe60785cadcc95d7270.jpg",
-            "price": 499.000,
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "nameCategory": "Khoa Hoc 3",
-        "listCourse": [
-          {
-            "id": 11,
-            "nameCourse": "Toeic 1",
-            "img": "https://i.pinimg.com/564x/2d/ea/03/2dea03e70e1add93759f35595cb4a410.jpg",
-            "price": 499.000,
-          },
-          {
-            "id": 12,
-            "nameCourse": "Toeic 2",
-            "img": "https://i.pinimg.com/564x/37/50/5f/37505f515a1f209f715f83b97f7e5443.jpg",
-            "price": 399.000,
-          },
-          {
-            "id": 14,
-            "nameCourse": "Toeic 2",
-            "img": "https://i.pinimg.com/564x/0d/fa/94/0dfa94b24f5252d8848dc3c57b2d2672.jpg",
-            "price": 499.000,
-          },
-          {
-            "id": 13,
-            "nameCourse": "Toeic 1",
-            "img": "https://i.pinimg.com/564x/2d/ea/03/2dea03e70e1add93759f35595cb4a410.jpg",
-            "price": 499.000,
-          },
-          {
-            "id": 12,
-            "nameCourse": "Toeic 4",
-            "img": "https://i.pinimg.com/564x/37/50/5f/37505f515a1f209f715f83b97f7e5443.jpg",
-            "price": 499.000,
-          },
-          {
-            "id": 14,
-            "nameCourse": "Toeic 6",
-            "img": "https://i.pinimg.com/564x/0d/fa/94/0dfa94b24f5252d8848dc3c57b2d2672.jpg",
-            "price": 499.000,
-          },
-          {
-            "id": 12,
-            "nameCourse": "Toeic 7",
-            "img": "https://i.pinimg.com/564x/37/50/5f/37505f515a1f209f715f83b97f7e5443.jpg",
-            "price": 499.000,
-          },
-          {
-            "id": 14,
-            "nameCourse": "Toeic 2",
-            "img": "https://i.pinimg.com/564x/0d/fa/94/0dfa94b24f5252d8848dc3c57b2d2672.jpg",
-            "price": 499.000,
-          }
-        ]
+              id: 2,
+              title: "Chapter 2",
+              numericalOrder: 2,
+              lesson: [
+                  {
+                      id: 3,
+                      title: "Lesson 2.1",
+                      pdfUrl: "/pdf/lesson2.1.pdf",
+                      videoUrl: "/videos/lesson2.1.mp4",
+                      numericalOrder: 1
+                  },
+                  {
+                      id: 4,
+                      title: "Lesson 2.2",
+                      pdfUrl: "/pdf/lesson2.2.pdf",
+                      videoUrl: "/videos/lesson2.2.mp4",
+                      numericalOrder: 2
+                  }
+              ]
+          },{
+            id: 999,
+            title: "Chapter 2",
+            numericalOrder: 2,
+            lesson: [
+                {
+                    id: 3,
+                    title: "Lesson 2.1",
+                    pdfUrl: "/pdf/lesson2.1.pdf",
+                    videoUrl: "/videos/lesson2.1.mp4",
+                    numericalOrder: 1
+                },
+                {
+                    id: 4,
+                    title: "Lesson 2.2",
+                    pdfUrl: "/pdf/lesson2.2.pdf",
+                    videoUrl: "/videos/lesson2.2.mp4",
+                    numericalOrder: 2
+                }
+            ]
+        },
+        {
+          id: 888,
+          title: "Chapter 2",
+          numericalOrder: 2,
+          lesson: [
+              {
+                  id: 3,
+                  title: "Lesson 2.1",
+                  pdfUrl: "/pdf/lesson2.1.pdf",
+                  videoUrl: "/videos/lesson2.1.mp4",
+                  numericalOrder: 1
+              },
+              {
+                  id: 4,
+                  title: "Lesson 2.2",
+                  pdfUrl: "/pdf/lesson2.2.pdf",
+                  videoUrl: "/videos/lesson2.2.mp4",
+                  numericalOrder: 2
+              }
+          ]
       }
-    ]
+      ]
+  },
+  {
+      id: 2,
+      name: "Course 2",
+      lessonQuantity: 8,
+      des: "Description of Course 2",
+      studyTime: "1.5 hours",
+      studyLevel: "Beginner",
+      course_chapter: [
+          {
+              id: 3,
+              title: "Chapter 1",
+              numericalOrder: 1,
+              lesson: [
+                  {
+                      id: 5,
+                      title: "Lesson 1.1",
+                      pdfUrl: "/pdf/lesson1.1.pdf",
+                      videoUrl: "/videos/lesson1.1.mp4",
+                      numericalOrder: 1
+                  },
+                  {
+                      id: 6,
+                      title: "Lesson 1.2",
+                      pdfUrl: "/pdf/lesson1.2.pdf",
+                      videoUrl: "/videos/lesson1.2.mp4",
+                      numericalOrder: 2
+                  }
+              ]
+          },
+          {
+              id: 4,
+              title: "Chapter 2",
+              numericalOrder: 2,
+              lesson: [
+                  {
+                      id: 7,
+                      title: "Lesson 2.1",
+                      pdfUrl: "/pdf/lesson2.1.pdf",
+                      videoUrl: "/videos/lesson2.1.mp4",
+                      numericalOrder: 1
+                  },
+                  {
+                      id: 8,
+                      title: "Lesson 2.2",
+                      pdfUrl: "/pdf/lesson2.2.pdf",
+                      videoUrl: "/videos/lesson2.2.mp4",
+                      numericalOrder: 2
+                  }
+              ]
+          },
+          {
+            id: 777,
+            title: "Chapter 2",
+            numericalOrder: 2,
+            lesson: [
+                {
+                    id: 3,
+                    title: "Lesson 2.1",
+                    pdfUrl: "/pdf/lesson2.1.pdf",
+                    videoUrl: "/videos/lesson2.1.mp4",
+                    numericalOrder: 1
+                },
+                {
+                    id: 4,
+                    title: "Lesson 2.2",
+                    pdfUrl: "/pdf/lesson2.2.pdf",
+                    videoUrl: "/videos/lesson2.2.mp4",
+                    numericalOrder: 2
+                }
+            ]
+        }
+      ]
+  },
+  ]
   )
   return (
-    <div style={{maxWidth:"1330px"}}>{courses.map((item) => (
+    <div style={{maxWidth:"1330px"}}>{listCourse.map((item: any) => (
         <ItemCourse key={Math.random() * Date.now()} course={item}/>
     ))}</div>
   )

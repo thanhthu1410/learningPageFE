@@ -131,16 +131,20 @@
 }
 @media screen and (max-width: 390px) {
     .coursePage_container {
-       font-size: 12px;
+
+       font-size: 12px !important;
         flex-direction: column;
         height: 95vh !important;
+        .btn_open_content{
+            font-size: 0.9rem;
+        }
         .coursePage_left {
             width: 100%;
         }
         .coursePage_right{
             width: 100%;
             padding: 5px !important;
-            margin: 0 auto;
+            margin: 15px auto;
             .btn-3{
                 width: 55% !important;
             }

@@ -130,3 +130,22 @@ footer {
     }
   }
 }
+@media screen and (max-width: 600px) {
+
+   .main-content{
+    
+    flex-direction: column !important;
+    div{
+      h2{
+        font-size: 12px;
+      }
+      p{
+        font-size: 12px;
+      }
+      .content{
+        font-size: 0.8rem;
+      }
+    }
+   }
+  
+}

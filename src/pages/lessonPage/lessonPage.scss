@@ -32,6 +32,10 @@
                 background-color: #29303b;
                 color: #fff;
             }
+            span:hover{
+                    cursor: pointer !important;
+                }
+            
             
            
             
@@ -110,6 +114,7 @@
         padding: 10px !important;
         height: 45px !important;
         background-color: grey !important;
+        
        
         .header_left{
             justify-content: start !important;

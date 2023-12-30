@@ -54,10 +54,11 @@ function handleShowSearch (searchKey: string) {
         </div>
       </div>
       {showNavbar ? <div className="navbar_mobile_content">
-        <p onClick={() => {navigate("/"); setShowNavbar(!showNavbar)}}>Home</p>
-        <p>Course</p>
-        <p onClick={() => {navigate("/login"); setShowNavbar(!showNavbar)}}>Login</p>
+        <p onClick={() => {navigate("/"); setShowNavbar(!showNavbar); setShowNavbar(!showNavbar)}}>Home</p>
         <ModalSearch/>
+        <p onClick={() => {navigate("/course/1"); setShowNavbar(!showNavbar); setShowNavbar(!showNavbar)}}>Course</p>
+        <p onClick={() => {navigate("/login"); setShowNavbar(!showNavbar); setShowNavbar(!showNavbar)}}>Login</p>
+       
       </div>: <></>}
      
     </div>

@@ -2,9 +2,11 @@ import { useState } from "react"
 import "./lessonPage.scss"
 import { useNavigate } from "react-router-dom";
 import { Popconfirm } from "antd";
+import Loading from "@/utils/lazies/components/Loading";
 
 export default function LessonPage() {
     const navigate = useNavigate();
+    const[loading,setLoangding] = useState(false);
     function handleLogOut() {
         navigate("/")
     }
@@ -62,7 +64,9 @@ export default function LessonPage() {
             ]
         },)
     return (
-        <div className="lessonPage_container">
+        <>
+       
+       {loading ?  <Loading/> :  <div className="lessonPage_container">
             <div className="lessonPage_header">
                 <div className="header_left">
                     <i onClick={() => navigate("/course/1")} className="fa-solid fa-angle-left"></i>
@@ -122,6 +126,8 @@ export default function LessonPage() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>}
+        </>
+        
     )
 }
