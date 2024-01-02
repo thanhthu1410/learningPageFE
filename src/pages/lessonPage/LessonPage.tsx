@@ -71,10 +71,10 @@ export default function LessonPage() {
                 <div className="header_left">
                     <i onClick={() => navigate("/course/1")} className="fa-solid fa-angle-left"></i>
                     <img src="https://vanphongxanh.vn/wp-content/uploads/2022/03/logo-social.png" alt="" />
-                    <h4>Ten Course nekk</h4>
+                    <h4>{lessonData.name}</h4>
                 </div>
                 <div className="header_rigth">
-                    <span>Home</span>
+                    <span onClick={() => navigate("/")}>Home</span>
                     <Popconfirm
                         placement="rightBottom"
                         title={"Do you want to Log Out?"}
@@ -90,6 +90,9 @@ export default function LessonPage() {
             <div className="lessonPage_body">
                 <div className="lessonPage_body_left">
                     <iframe width="100%" height="415" src="https://www.youtube.com/embed/9aO28KCCA0U?si=BXmFTDk1TN9NMd1_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <p>{lessonData.name}</p>
+                    <p>{lessonData.des}</p>
+                    <p>{lessonData.studyLevel}</p>
                 </div>
                 <div className="lessonPage_body_right">
                     <p>Nội dung khoá học </p>

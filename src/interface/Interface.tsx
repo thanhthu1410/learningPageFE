@@ -1,8 +1,10 @@
 export interface Category{
     id: number;
+    nameCategory: string;
+    listCourse: Course[]
     
 }
-
+// Định nghĩa giao diện course 
 export interface Course {
     id: number;
     name: string;
@@ -13,7 +15,7 @@ export interface Course {
     course_chapter: Course_chapter[]
 }
 
-// Định nghĩa giao diện Module
+// Định nghĩa giao diện course chapter
 export interface Course_chapter {
     id: number;
     title: string;

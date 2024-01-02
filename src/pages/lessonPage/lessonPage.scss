@@ -45,12 +45,15 @@
    
     .lessonPage_body{
         width: 100%;
-        padding: 15px;
+        padding: 20px;
         min-height: 90vh;
         display: flex;
         justify-content: space-between;
         .lessonPage_body_left{
             width: 65%;
+            p{
+                margin: 0;
+            }
             
         }
         .lessonPage_body_right{

@@ -17,7 +17,7 @@ export default function Sidebar() {
         </div >
         <div  className="side_item">
         <i className="fa-brands fa-blogger"></i>
-            <span  onClick={() => navigate("/")}>Contact</span>
+            <span  onClick={() => navigate("/")}>About</span>
         </div>
     </div>
   )

@@ -22,7 +22,7 @@ function handleShowSearch (searchKey: string) {
         </div>
         <div className="search">
           <i className="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Tim kiem khoa hoc.... " onChange={(e) => handleShowSearch(e.target.value)}/>
+          <input type="text" placeholder="Enter key search.... " onChange={(e) => handleShowSearch(e.target.value)}/>
           {showSearch ? 
           <div className="search_content_container">
             <p className="result-search-title">Không có kết quả tương ứng </p>
