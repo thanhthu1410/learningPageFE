@@ -8,7 +8,7 @@ export default function CarouselComponent() {
     {
       id: 1,
       url:"https://www.shutterstock.com/image-vector/english-colorful-typography-banner-260nw-1356202124.jpg" ,
-      link: "/course",
+      link: "/course/1",
       titleBtn: "Khóa Học"
     },
     {
@@ -39,7 +39,7 @@ const navigate = useNavigate()
         {banners.map((banner, index) => (
           <div className="items" key={banner.id + index}>
             <img className="items-img" src={banner.url} alt={`Banner ${banner.id}`} />
-            <button className='btn_banner' onClick={() => navigate(`/${banner.link}`)}>{banner.titleBtn}</button>
+            <button className='btn_banner' onClick={() => navigate(`/course/${banner.id}`)}>{banner.titleBtn}</button>
           </div>
         ))}
       </Carousel>

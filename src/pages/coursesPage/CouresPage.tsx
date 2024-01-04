@@ -4,7 +4,6 @@ import ModalVideo from "./modalVideoCourse/ModalVideoCourse";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Loading from "@/utils/lazies/components/Loading";
-import FeatureVideo from "../homes/components/featureVideo/FeatureVideo";
 
 const coursesData: Course =  {
         id: 1,
@@ -13,6 +12,7 @@ const coursesData: Course =  {
         des: "Description of Course 1 lorem hii Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum porro ipsam iusto assumenda nostrum debitis reprehenderit, sequi sed animi eligendi doloribus neque. Sequi eveniet at, aperiam error velit in eaque.",
         studyTime: "2 hours",
         studyLevel: "Intermediate",
+        img: "https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2019_09_english.jpg",
         course_chapter: [
             {
                 id: 1,
@@ -141,7 +141,7 @@ const navigate = useNavigate();
         </div>
        {
          <div className="coursePage_right">
-         <div className="avatar_course" style={{ backgroundImage: `url(https://truonghoc247.vn/wp-content/uploads/2023/09/ung-dung-hoc-tieng-anh-0.jpg)` }}>
+         <div className="avatar_course" style={{ backgroundImage: `url(${coursesData.img})` }}>
              <div className="activevideo_container">
              <ModalVideo/>
              <span>Gioi thieu khoa hoc</span>

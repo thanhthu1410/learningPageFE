@@ -12,9 +12,9 @@ export default function ItemCourse(props: Props) {
             <div className='listcourse_container'>
                 {props.course.listCourse?.map((item: Course) => (
                     <div key={Math.random() * Date.now()} className="item_content">
-                        <img src="https://thumbs.dreamstime.com/z/english-british-england-language-education-concept-58368527.jpg" alt="" />
+                        <img src={item.img} alt="" />
                         <p>{item.name}</p>
-                        <p>999.000vnd</p>
+                        <p>{item.price}vnd</p>
                         <div className="middle">
                             <div className="text" onClick={()=> navigate(`course/${item.id}`)}>Xem khóa học</div>
                         </div>

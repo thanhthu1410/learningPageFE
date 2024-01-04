@@ -12,6 +12,7 @@ export default function RouteSetup() {
     <BrowserRouter>
        <Routes>
         <Route path='/' element={<Layout />}>
+
           <Route index element={<Home/>}></Route>
           <Route path='blog/:id' element={<BlogDetail/>}></Route>
        
@@ -19,6 +20,7 @@ export default function RouteSetup() {
         </Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/lesson/1' element={<LessonPage/>}> </Route>
+      
         </Routes>
 
     </BrowserRouter>
